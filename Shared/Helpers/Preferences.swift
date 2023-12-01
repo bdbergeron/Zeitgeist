@@ -46,7 +46,7 @@ struct Preferences {
 	@AppStorage(Preferences.authenticatedAccounts)
 	static var accounts
 
-	static let store = UserDefaults(suiteName: "group.me.daneden.Zeitgeist")!
+	static let store = UserDefaults(suiteName: "group.com.bradbergeron.apps.Zeitgeist")!
 }
 
 extension AppStorage {

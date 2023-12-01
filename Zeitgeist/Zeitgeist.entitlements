@@ -10,13 +10,13 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.me.daneden.Zeitgeist</string>
+		<string>group.com.bradbergeron.apps.Zeitgeist</string>
 	</array>
 	<key>com.apple.security.network.client</key>
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)me.daneden.Zeitgeist</string>
+		<string>$(AppIdentifierPrefix)com.bradbergeron.apps.Zeitgeist</string>
 	</array>
 </dict>
 </plist>
