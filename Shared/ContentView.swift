@@ -45,5 +45,6 @@ struct ContentView: View {
 				.frame(minWidth: 800, minHeight: 600)
 			#endif
 		}
+		.deeplinkRegistry(urlScheme: "zeitgeist")
 	}
 }

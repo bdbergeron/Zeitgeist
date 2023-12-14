@@ -119,6 +119,12 @@
 		71F902072665683B000A8873 /* Array.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71155363266282C900A73CD6 /* Array.extension.swift */; };
 		71F9020B26656A21000A8873 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9020826656A21000A8873 /* Preferences.swift */; };
 		71F9020C26656A21000A8873 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F9020826656A21000A8873 /* Preferences.swift */; };
+		E8284D2A2B2B7A2900EFA673 /* ProjectDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D232B2B7A2900EFA673 /* ProjectDeepLink.swift */; };
+		E8284D2B2B2B7A2900EFA673 /* AccountDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D242B2B7A2900EFA673 /* AccountDeepLink.swift */; };
+		E8284D2C2B2B7A2900EFA673 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D262B2B7A2900EFA673 /* Deeplink.swift */; };
+		E8284D2D2B2B7A2900EFA673 /* DeeplinkRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D272B2B7A2900EFA673 /* DeeplinkRegistry.swift */; };
+		E8284D2E2B2B7A2900EFA673 /* View+HandleDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D282B2B7A2900EFA673 /* View+HandleDeeplink.swift */; };
+		E8284D2F2B2B7A2900EFA673 /* View+DeeplinkRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8284D292B2B7A2900EFA673 /* View+DeeplinkRegistry.swift */; };
 		E875EDD22B1A460E00BB3BBA /* LatestDeploymentEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA9F112B0F09DC00030016 /* LatestDeploymentEntry.swift */; };
 		E875EDD32B1A460E00BB3BBA /* RecentDeploymentsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA9F152B0F0B1300030016 /* RecentDeploymentsEntry.swift */; };
 		E875EDD42B1A461700BB3BBA /* WidgetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA9F1C2B0F0D2600030016 /* WidgetLabel.swift */; };
@@ -243,6 +249,12 @@
 		71F2607F28C48DE40089195B /* NavigationHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelpers.swift; sourceTree = "<group>"; };
 		71F901FE266566FB000A8873 /* SelectWidgetAccountIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SelectWidgetAccountIntent.entitlements; sourceTree = "<group>"; };
 		71F9020826656A21000A8873 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		E8284D232B2B7A2900EFA673 /* ProjectDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDeepLink.swift; sourceTree = "<group>"; };
+		E8284D242B2B7A2900EFA673 /* AccountDeepLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDeepLink.swift; sourceTree = "<group>"; };
+		E8284D262B2B7A2900EFA673 /* Deeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		E8284D272B2B7A2900EFA673 /* DeeplinkRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeeplinkRegistry.swift; sourceTree = "<group>"; };
+		E8284D282B2B7A2900EFA673 /* View+HandleDeeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+HandleDeeplink.swift"; sourceTree = "<group>"; };
+		E8284D292B2B7A2900EFA673 /* View+DeeplinkRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+DeeplinkRegistry.swift"; sourceTree = "<group>"; };
 		E875EDDA2B1A479C00BB3BBA /* WidgetPaddingViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetPaddingViewModifier.swift; sourceTree = "<group>"; };
 		E875EDDB2B1A479C00BB3BBA /* WidgetBackgroundViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetBackgroundViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -341,6 +353,8 @@
 				71CAE84028AD24260063F338 /* ContentView.swift */,
 				71155346266279CF00A73CD6 /* ZeitgeistApp.swift */,
 				7115534A266279D000A73CD6 /* Assets.xcassets */,
+				E8284D252B2B7A2900EFA673 /* Deeplinking */,
+				E8284D222B2B7A2900EFA673 /* Deeplinks */,
 				71155362266282BE00A73CD6 /* Extensions */,
 				7115535A26627BA800A73CD6 /* Helper Views */,
 				7115535F26627F3400A73CD6 /* Helpers */,
@@ -520,6 +534,26 @@
 			path = "Environment Variables";
 			sourceTree = "<group>";
 		};
+		E8284D222B2B7A2900EFA673 /* Deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+				E8284D232B2B7A2900EFA673 /* ProjectDeepLink.swift */,
+				E8284D242B2B7A2900EFA673 /* AccountDeepLink.swift */,
+			);
+			path = Deeplinks;
+			sourceTree = "<group>";
+		};
+		E8284D252B2B7A2900EFA673 /* Deeplinking */ = {
+			isa = PBXGroup;
+			children = (
+				E8284D262B2B7A2900EFA673 /* Deeplink.swift */,
+				E8284D272B2B7A2900EFA673 /* DeeplinkRegistry.swift */,
+				E8284D282B2B7A2900EFA673 /* View+HandleDeeplink.swift */,
+				E8284D292B2B7A2900EFA673 /* View+DeeplinkRegistry.swift */,
+			);
+			path = Deeplinking;
+			sourceTree = "<group>";
+		};
 		E875EDD92B1A479C00BB3BBA /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +702,7 @@
 				7109AD052B18A47500724454 /* URL.extension.swift in Sources */,
 				7109AD092B18A47900724454 /* LatestEventMenuBarLabel.swift in Sources */,
 				7109AD0C2B18A47900724454 /* ZeitgeistLogo.swift in Sources */,
+				E8284D2F2B2B7A2900EFA673 /* View+DeeplinkRegistry.swift in Sources */,
 				7139DCE92B18D27A00E86183 /* SignOutButton.swift in Sources */,
 				7109AD002B18A47500724454 /* UIDevice+deviceInfo.swift in Sources */,
 				7109AD0F2B18A48000724454 /* NotificationManager.swift in Sources */,
@@ -676,6 +711,7 @@
 				7109AD1D2B18A48500724454 /* GitCommit.swift in Sources */,
 				7109AD102B18A48000724454 /* MigrationHelpers.swift in Sources */,
 				7109AD062B18A47500724454 /* Dictionary.swift in Sources */,
+				E8284D2B2B2B7A2900EFA673 /* AccountDeepLink.swift in Sources */,
 				7109AD232B18A49400724454 /* DeploymentLogView.swift in Sources */,
 				7109AD2B2B18A4A200724454 /* ProjectsListRowView.swift in Sources */,
 				7109AD1E2B18A48500724454 /* SignInViewModel.swift in Sources */,
@@ -690,6 +726,7 @@
 				7109AD2F2B18A4A700724454 /* SettingsView.swift in Sources */,
 				7109AD2D2B18A4A200724454 /* ProjectNotificationsView.swift in Sources */,
 				7109AD152B18A48500724454 /* VercelAccountModel.swift in Sources */,
+				E8284D2D2B2B7A2900EFA673 /* DeeplinkRegistry.swift in Sources */,
 				7109AD302B18A4A700724454 /* NotificationPreview.swift in Sources */,
 				7109AD0B2B18A47900724454 /* StatusBannerView.swift in Sources */,
 				7109ACFF2B18A47500724454 /* Array.extension.swift in Sources */,
@@ -700,12 +737,15 @@
 				7109AD0D2B18A48000724454 /* NavigationHelpers.swift in Sources */,
 				7109AD282B18A49900724454 /* EnvironmentVariableEditView.swift in Sources */,
 				7109AD1A2B18A48500724454 /* VercelDomain.swift in Sources */,
+				E8284D2A2B2B7A2900EFA673 /* ProjectDeepLink.swift in Sources */,
 				7109AD162B18A48500724454 /* VercelSession.swift in Sources */,
 				7109AD022B18A47500724454 /* View+dataTask.swift in Sources */,
+				E8284D2E2B2B7A2900EFA673 /* View+HandleDeeplink.swift in Sources */,
 				7109AD272B18A49900724454 /* EnvironmentVariableRowView.swift in Sources */,
 				7109AD212B18A49400724454 /* DeploymentDetailView.swift in Sources */,
 				7109AD112B18A48000724454 /* PostalService.swift in Sources */,
 				7109AD042B18A47500724454 /* Notification+ZPS.swift in Sources */,
+				E8284D2C2B2B7A2900EFA673 /* Deeplink.swift in Sources */,
 				7109ACFD2B18A47000724454 /* ZeitgeistApp.swift in Sources */,
 				7109AD222B18A49400724454 /* DeploymentFilterView.swift in Sources */,
 				7109ACF92B18A47000724454 /* ContentView.swift in Sources */,

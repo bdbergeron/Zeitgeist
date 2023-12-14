@@ -134,6 +134,18 @@ struct AuthenticatedContentView: View {
 				selectedAccount = nil
 			}
 		})
+		.handleDeeplink(handler: AccountDeeplinkHandler { deeplink in
+			guard let account = accounts.first(where: { $0.id == deeplink.accountID }) else {
+				return
+			}
+			selectedAccount = account
+		})
+		.handleDeeplink(handler: ProjectDeeplinkHandler { deeplink in
+			guard let account = accounts.first(where: { $0.id == deeplink.accountID }) else {
+				return
+			}
+			selectedAccount = account
+		})
 	}
 	
 	func deleteAccount(at indices: IndexSet) {
